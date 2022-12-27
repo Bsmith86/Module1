@@ -1,0 +1,45 @@
+#flex-container {
+    display: flex;
+    background-image: url("/images/1624.jpg");
+}
+
+#my-ship {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    height: 900px;
+    flex-wrap: un-wrap;
+    align-items: flex-end;
+  
+}
+
+#alienShips {
+    display: flex;
+    flex-direction: column; 
+    height: 2000px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+}
+
+#myShip {
+    color: rgb(92, 38, 49);
+    margin-left: auto;
+    
+}
+#my-ship-hull {
+    color: rgb(232, 232, 207);
+}
+
+div h1 {
+    color: beige;
+}
+div h3 {
+    color: rgb(236, 236, 215);
+}
