@@ -91,19 +91,26 @@ console.log(myAlienShips);
 // let myShip = document.getElementById('my-ship');
 // let alien1 = document.getElementById('alien1');
 // let ship1Hull = document.getElementById('ship1Hull');
+
 const showHull = () => {
   let life = document.querySelector(".hull");
-  life.append(me.hull)
+  life.textContent = me.hull
   
 };
 
-// const aHp = () => {
-//   let health = document.querySelector(".aHull");
-//   health.replaceWith(ship.aHull);
-// };
+const aHp = () => {
+  let alienHulls = document.querySelectorAll('.aHull')
+
+  alienHulls.forEach((element, index) => {
+    element.textContent = myAlienShips.ships[index].hull
+
+  });
+  
+  // health.textContent = ship.aHull;
+};
 const saveEarth = () => {
    showHull();
-  //  aHp();
+   aHp();
   let ships = myAlienShips.ships;
 
   for (let i = 0; i < ships.length; i++) {
