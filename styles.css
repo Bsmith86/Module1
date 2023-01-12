@@ -31,6 +31,7 @@ h1 {
 #myShip {
     color: rgb(92, 38, 49);
     margin-left: auto;
+    margin-top: 600px;
     
 }
 #my-ship-hull {
