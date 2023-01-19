@@ -56,9 +56,9 @@ class AlienShips {
   addShip(name, id) {
     let hull = Math.floor(Math.random() * 4) + 3;
     let firePower = Math.floor(Math.random() * 3) + 2;
-    let accurracy = Math.random() * 0.2 + 0.6;
+    let accuracy = Math.random() * 0.2 + 0.6;
 
-    let newShip = new SpaceShip(name, hull, firePower, accurracy, id);
+    let newShip = new SpaceShip(name, hull, firePower, accuracy, id);
 
     this.ships.push(newShip);
   }
@@ -105,9 +105,11 @@ const aHp = () => {
     element.textContent = myAlienShips.ships[index].hull
 
   });
-  
-  // health.textContent = ship.aHull;
 };
+  
+
+  let alienImgArray = document.querySelectorAll('.alien')
+
 const saveEarth = () => {
    showHull();
    aHp();
@@ -129,7 +131,8 @@ const saveEarth = () => {
       console.log(ships[i]);
       // check if enemy hull = 0
       if (ships[i].hull <= 0) {
-        // ships.shift();
+        aHp();
+        alienImgArray[i].src = './images/enemy_ship_dead.png'
         break;
       }
       // defend
@@ -138,6 +141,7 @@ const saveEarth = () => {
       showHull()
       // check if I'm alive
       if (me.hull < 1) {
+        showHull();
         console.log(`${me.name} was destroyed. GAME OVER!`);
         break;
       }
